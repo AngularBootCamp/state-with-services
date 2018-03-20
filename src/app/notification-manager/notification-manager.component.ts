@@ -4,7 +4,7 @@ import { EmployeeListService } from './employee-list/employee-list.service';
 import { PositionListService } from './position-list/position-list.service';
 @Component({
   selector: 'notification-manager',
-  templateUrl: './notification-manager.component.html',
+  templateUrl: './notification-manager.component.html'
 })
 export class NotificationManagerComponent {
 
