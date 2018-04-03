@@ -1,6 +1,6 @@
 // See employee-list.service.ts for
 // a rundown of what these services do.
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject } from 'rxjs';
 
 export class PositionListService {
 

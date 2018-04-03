@@ -1,7 +1,7 @@
 // Behavior Subject is a subclass of Observable
 // it is an Observable that allows the creator
 // to "push" new values into it
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject } from 'rxjs';
 
 export class EmployeeListService {
 
