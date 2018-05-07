@@ -1,8 +1,14 @@
+import { Injectable } from '@angular/core';
 // Behavior Subject is a subclass of Observable
 // it is an Observable that allows the creator
 // to "push" new values into it
 import { BehaviorSubject } from 'rxjs';
 
+@Injectable({
+  // This service should be created
+  // by the root application injector.
+  providedIn: 'root'
+})
 export class EmployeeListService {
 
   // Application State for current and new employees

@@ -7,11 +7,6 @@ import { PositionListComponent } from './notification-manager/position-list/posi
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared-module/shared.module';
 
-// Providing at the app module level
-// For state we generally want a singleton throughout
-import { EmployeeListService } from './notification-manager/employee-list/employee-list.service';
-import { PositionListService } from './notification-manager/position-list/position-list.service';
-
 @NgModule({
   declarations: [
     NotificationManagerComponent,
@@ -23,7 +18,6 @@ import { PositionListService } from './notification-manager/position-list/positi
     BrowserModule,
     SharedModule
   ],
-  providers: [EmployeeListService, PositionListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,12 @@
-// See employee-list.service.ts for
-// a rundown of what these services do.
+import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
+// See employee-list.service.ts for
+// a rundown of what these services do.
+
+@Injectable({
+  providedIn: 'root'
+})
 export class PositionListService {
 
   private _currentPositions = [
