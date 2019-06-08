@@ -14,10 +14,7 @@ import { SharedModule } from './shared-module/shared.module';
     PositionListComponent,
     AppComponent
   ],
-  imports: [
-    BrowserModule,
-    SharedModule
-  ],
+  imports: [BrowserModule, SharedModule],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

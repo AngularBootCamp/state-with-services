@@ -8,11 +8,10 @@ import { PositionListService } from './position-list/position-list.service';
   templateUrl: './notification-manager.component.html'
 })
 export class NotificationManagerComponent {
-
   constructor(
     private employeeListService: EmployeeListService,
     private positionListService: PositionListService
-  ) { }
+  ) {}
 
   ackAll() {
     this.positionListService.ackAll();

@@ -11,7 +11,6 @@ import { EmployeeListService } from './employee-list.service';
   templateUrl: './employee-list.component.html'
 })
 export class EmployeeListComponent {
-
   curEmployees: Observable<string[]>;
   newEmployees: Observable<string[]>;
 
