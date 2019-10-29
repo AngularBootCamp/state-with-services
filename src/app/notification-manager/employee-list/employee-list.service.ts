@@ -40,16 +40,17 @@ export class EmployeeListService {
     this.newEmployees.next(this._newEmployees);
 
     // 3. Update state by assigning a new array for _currentEmployees
-    this._currentEmployees.push(employee);
+    this._currentEmployees = [...this._currentEmployees, employee];
 
     // 4. Notify any consumers of the employee state of changes to current employees
     this.currentEmployees.next(this._currentEmployees);
   }
 
   ackAll() {
-    this._newEmployees.forEach(emp =>
-      this._currentEmployees.push(emp)
-    );
+    this._newEmployees = [
+      ...this._currentEmployees,
+      ...this._newEmployees
+    ];
     this._newEmployees = [];
     this.newEmployees.next(this._newEmployees);
     this.currentEmployees.next(this._currentEmployees);

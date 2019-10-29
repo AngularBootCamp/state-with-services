@@ -23,16 +23,21 @@ export class PositionListService {
     this._newPositions = this._newPositions.filter(
       curPosition => curPosition !== position
     );
+
     this.newPositions.next(this._newPositions);
-    this._currentPositions.push(position);
+
+    this._currentPositions = [...this._currentPositions, position];
+
     this.currentPositions.next(this._currentPositions);
   }
 
   ackAll() {
-    this._newPositions.forEach(emp =>
-      this._currentPositions.push(emp)
-    );
+    this._currentPositions = [
+      ...this._currentPositions,
+      ...this._newPositions
+    ];
     this._newPositions = [];
+
     this.newPositions.next(this._newPositions);
     this.currentPositions.next(this._currentPositions);
   }
