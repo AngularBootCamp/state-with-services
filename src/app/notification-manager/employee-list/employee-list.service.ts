@@ -47,7 +47,7 @@ export class EmployeeListService {
   }
 
   ackAll() {
-    this._newEmployees = [
+    this._currentEmployees = [
       ...this._currentEmployees,
       ...this._newEmployees
     ];
