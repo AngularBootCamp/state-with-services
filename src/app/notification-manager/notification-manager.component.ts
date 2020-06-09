@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { EmployeeListService } from './employee-list/employee-list.service';
-import { PositionListService } from './position-list/position-list.service';
+import { HomeTaskListService } from './home-task-list/home-task-list.service';
+import { WorkTaskListService } from './work-task-list/work-task-list.service';
 
 @Component({
   selector: 'notification-manager',
@@ -9,12 +9,12 @@ import { PositionListService } from './position-list/position-list.service';
 })
 export class NotificationManagerComponent {
   constructor(
-    private employeeListService: EmployeeListService,
-    private positionListService: PositionListService
+    private workTaskListService: WorkTaskListService,
+    private homeTaskListService: HomeTaskListService
   ) {}
 
-  ackAll() {
-    this.positionListService.ackAll();
-    this.employeeListService.ackAll();
+  completeAll() {
+    this.homeTaskListService.completeAll();
+    this.workTaskListService.completeAll();
   }
 }

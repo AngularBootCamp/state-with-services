@@ -2,19 +2,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { EmployeeListComponent } from './notification-manager/employee-list/employee-list.component';
+import { HomeTaskListComponent } from './notification-manager/home-task-list/home-task-list.component';
 import { NotificationManagerComponent } from './notification-manager/notification-manager.component';
-import { PositionListComponent } from './notification-manager/position-list/position-list.component';
-import { SharedModule } from './shared-module/shared.module';
+import { WorkTaskListComponent } from './notification-manager/work-task-list/work-task-list.component';
+import { TodoListModule } from './todo-list/todo-list.module';
 
 @NgModule({
   declarations: [
     NotificationManagerComponent,
-    EmployeeListComponent,
-    PositionListComponent,
+    WorkTaskListComponent,
+    HomeTaskListComponent,
     AppComponent
   ],
-  imports: [BrowserModule, SharedModule],
+  imports: [BrowserModule, TodoListModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
