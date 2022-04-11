@@ -3,7 +3,7 @@
   <div class="card-content">
     <div class="card-title">Complete</div>
     <todo-list
-      [list]="done | async"
+      [list]="(done | async) ?? []"
       [icon]="checkbox"
       (setTaskStatus)="setStatus($event, true)"
     ></todo-list>
@@ -13,7 +13,7 @@
   <div class="card-content">
     <div class="card-title">In-Progress</div>
     <todo-list
-      [list]="todo | async"
+      [list]="(todo | async) ?? []"
       [icon]="outline"
       (setTaskStatus)="setStatus($event, false)"
     ></todo-list>

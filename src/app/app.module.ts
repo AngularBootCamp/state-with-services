@@ -9,10 +9,10 @@ import { TodoListModule } from './todo-list/todo-list.module';
 
 @NgModule({
   declarations: [
-    NotificationManagerComponent,
-    WorkTaskListComponent,
+    AppComponent,
     HomeTaskListComponent,
-    AppComponent
+    NotificationManagerComponent,
+    WorkTaskListComponent
   ],
   imports: [BrowserModule, TodoListModule],
   bootstrap: [AppComponent]
