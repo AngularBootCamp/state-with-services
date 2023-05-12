@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { HomeTaskListService } from './home-task-list.service';
 
 @Component({
-  selector: 'home-task-list',
+  selector: 'app-home-task-list',
   templateUrl: './home-task-list.component.html'
 })
 export class HomeTaskListComponent {
