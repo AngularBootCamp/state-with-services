@@ -1,11 +1,16 @@
+import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+
+import { ToDoListComponent } from '../../todo-list/todo-list.component';
 
 import { HomeTaskListService } from './home-task-list.service';
 
 @Component({
   selector: 'app-home-task-list',
-  templateUrl: './home-task-list.component.html'
+  templateUrl: './home-task-list.component.html',
+  standalone: true,
+  imports: [ToDoListComponent, AsyncPipe]
 })
 export class HomeTaskListComponent {
   done: Observable<string[]>;

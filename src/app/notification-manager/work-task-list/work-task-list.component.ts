@@ -1,5 +1,8 @@
+import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+
+import { ToDoListComponent } from '../../todo-list/todo-list.component';
 
 import { WorkTaskListService } from './work-task-list.service';
 /*
@@ -8,7 +11,9 @@ import { WorkTaskListService } from './work-task-list.service';
 */
 @Component({
   selector: 'app-work-task-list',
-  templateUrl: './work-task-list.component.html'
+  templateUrl: './work-task-list.component.html',
+  standalone: true,
+  imports: [ToDoListComponent, AsyncPipe]
 })
 export class WorkTaskListComponent {
   todo: Observable<string[]>;
